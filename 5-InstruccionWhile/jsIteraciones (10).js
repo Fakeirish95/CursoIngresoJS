@@ -1,88 +1,74 @@
 function mostrar()
 {
 
-	var contador=0;
-
+	var contador = 0;
 	var numero;
+	var respuesta = "si";
+	var sumaNegativos = 0;
+	var sumaPositivos = 0;
+	var contadorPositivos = 0;
+	var contadorNegativos = 0;
+	var contadorCeros = 0;
+	var contadorPar = 0;
+	var promedioNegativos = 0;
+	var promedioPositivos =  0;
+	var diferencia;
 
-	contador=parseInt(contador);
-
-	var contadorNegativos=0;
-
-	contadorNegativos=parseInt(contadorNegativos);
-
-	var contadorPositivos=0;
-
-	contadorPositivos=parseInt(contadorPositivos);
-
-	var contadorCeros=0;
-
-	contadorCeros=parseInt(contadorCeros);
-
-	var contadorPares=0;
-
-	var acumuladorNegativos;
-
-	var acumuladorPositivos;
-
-	acumuladorPositivos=parseInt(acumuladorPositivos);
-
-	acumuladorNegativos=parseInt(acumuladorNegativos);
-
-	contadorPares=parseInt(contadorPares);
-	
-	var respuesta="SI";
-
-	respuesta=respuesta.toUpperCase();
-
-	while (respuesta != "NO")
-			{
-			
-				numero = parseInt(prompt("Ingrese un numero"));
-				contador++;
+	while(respuesta!="no")
+	{
 		
-					
-					while(isNaN(numero))
-						{
-							numero = parseInt(prompt("Ingrese un numero"));
-							
-
-
-						}
-							respuesta = prompt ("¿Desea continuar?");
-							respuesta=respuesta.toUpperCase();
+		numero = parseInt(prompt("Ingrese el valor."));
+		
+		if(numero < 0 )
 		{
-			if (numero < 0)
-					{
-						contadorNegativos++;
-						acumuladorNegativos= acumuladorNegativos + numero;
 
-					}
-					else if (numero > 0)
-							{
-								contadorPositivos++;
-								acumuladorPositivos=acumuladorPositivos+numero;
-							}
-							else if (numero == 0)
-									{
-										contadorCeros++
+			sumaNegativos = sumaNegativos + numero;
+			contadorNegativos++;
 
-									}
-										else if (numero / 2 == 0)
-												{
+		}else
+		{
 
-													contadorPares++
-												}
+			if(numero > 0)
+			{
 
-			
+			sumaPositivos = sumaPositivos + numero;
+			contadorPositivos++;
 
+			}
+		}
+		
+		if(numero == 0)
+		{
+
+			contadorCeros++;
 
 		}
-		document.write(contador);
-		document.write(contadorPares);
-		document.write(contadorCeros);
-		document.write(contadorPositivos);
-		document.write(contadorNegativos);
+
+		if(numero % 2 == 0)
+		{
+
+			contadorPar++;
+
+		}
+
+		respuesta = prompt("Ingrese 'No' para salir.");
+
+	}
+
+	promedioPositivos = sumaPositivos / contadorPositivos;
+	promedioNegativos = sumaNegativos / contadorNegativos;
+	diferencia = sumaPositivos - sumaNegativos;
+
+
+	document.write("La suma de los negativos es: " + sumaNegativos);
+	document.write("La suma de los positivos es: " + sumaPositivos);
+	document.write("La cantidad de positivos es: " + contadorPositivos);
+	document.write("La cantidad de negativos es: " + contadorNegativos);
+	document.write("La cantidad de ceros es: " + contadorCeros);
+	document.write("La cantidad de numeros pares es: " + contadorPar);
+	document.write("El promedio de los positivos es: " + promedioPositivos);
+	document.write("El promedio de los negativos es: " + promedioNegativos);
+	document.write("La diferencia entre negativos y positivos es: " + diferencia);
 
 
 
