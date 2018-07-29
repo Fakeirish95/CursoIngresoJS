@@ -52,7 +52,8 @@ function CalcularPrecio ()
  						break;
  						default:
  							descuento= 0.80;
- 					}
+ 					}//fin de switch
+ 						break;
  				case 5:
  				switch (marca)
  				{
@@ -61,7 +62,7 @@ function CalcularPrecio ()
  					break;
  					default:
  					descuento= 0.70;
- 				}
+ 				}//fin de switch
  						break;
  			default:
  			descuento= 0.50;
