@@ -12,4 +12,5 @@ function mostrar()
 	document.getElementById('Numero').value = numero;
 
 
+
 }//FIN DE LA FUNCIÓN
