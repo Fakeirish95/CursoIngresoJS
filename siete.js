@@ -58,7 +58,7 @@ function mostrar()
 			sexo = sexo.toLowerCase();
 			contador++
 
-	//algorismos
+	//algoritmos
 				
 				while (edad < 0 || edad > 100)
 					{
@@ -87,46 +87,39 @@ function mostrar()
 										{
 											menorEdad = edad;
 											mayorEdad = edad;
+											nombreMayor=nombre;
+											nombreMenor=nombre;											
 										}
-
-										else if (mayorEdad < edad)
-											{
-												mayorEdad=edad;
-												nombreMayor=nombre;												
-											}										
-											else if (menorEdad > edad)
+											if (edad>menorEdad && edad<mayorEdad)
 												{
-													menorEdad=edad;
-													nombreMenor=nombre;													
+													nombreHombreMenor=nombre;
+													edadHombreMenor=edad;
 												}
-												if (sexo = "m" && )
-												 
 
+												else if (mayorEdad < edad)
+													{
+														mayorEdad=edad;
+														nombreMayor=nombre;												
+													}										
+											 		else if (menorEdad > edad)
+														{
+															menorEdad=edad;
+															nombreMenor=nombre;	
+														}
 
+										
+																	 
 		}
-
-if (nombreMayor=nombre && sexo = "m")
-{
-edadHombreMenor=edad;
-nombreHombreMenor=nombre;
-}	
-
-
-
-
-
-
-
 
 //Mostrar
 
-document.write("La cantidad de mayores de edad es de " + contadorMayores + " personas" + "<br>");
-document.write("La cantidad de menores de edad es de " + contadorMenores + "personas" + "<br>");
-document.write("La cantidad de hombres es de " + contadorHombres + "<br>");
-document.write ("La cantidad de mujeres es de " + contadorMujeres + "<br>");
-document.write("El nombre del menor de edad es " +nombreMenor+ " y tiene " + menorEdad + " años." + "<br>" );
-document.write("el nombre del mayor de edad es " +nombreMayor+ " y tiene " + mayorEdad +  " años" +"<br>");
-document.write("El hombre menor es " + nombreHombreMenor + " y tiene " + edadHombreMenor + " años" + "<br>");
+	document.write("La cantidad de mayores de edad es de " + contadorMayores + " personas" + "<br>");
+	document.write("La cantidad de menores de edad es de " + contadorMenores + "personas" + "<br>");
+	document.write("La cantidad de hombres es de " + contadorHombres + "<br>");
+	document.write ("La cantidad de mujeres es de " + contadorMujeres + "<br>");
+	document.write("El nombre del menor de edad es " +nombreMenor+ " y tiene " + menorEdad + " años." + "<br>" );
+	document.write("el nombre del mayor de edad es " +nombreMayor+ " y tiene " + mayorEdad +  " años" +"<br>");
+	//document.write("El hombre menor es " + nombreHombreMenor + " y tiene " + edadHombreMenor + " años" + "<br>");
 
 
 
